@@ -13,15 +13,41 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\OutcomePresenter">
+      <UniqueIdentifier>{9da097d3-3afd-490a-843c-eda33772382c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DataLoader">
+      <UniqueIdentifier>{4ababea3-1b65-4979-9ab8-a90720912a64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FragLocator">
+      <UniqueIdentifier>{f98a2d79-bed5-44f4-ba40-963e52472bc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Globals">
+      <UniqueIdentifier>{ff0a79a3-a68e-4c38-b5f5-4f5bc811f32f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Interface">
+      <UniqueIdentifier>{1691b12e-ea0b-4c7d-a015-751ba4075a83}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyForm.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageWindow.cpp">
+      <Filter>Header Files\Interface</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MessageWindow.h">
+      <Filter>Header Files\Interface</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MyForm.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
