@@ -234,8 +234,7 @@ namespace AFS {
 	private: 
 		System::Void showHelp_Click(System::Object^  sender, System::EventArgs^  e) 
 		{
-			MessageWindow^ msw = gcnew MessageWindow();
-			msw->showMessage("О программе", "Программа поиска фрагмента версии 1.0");
+			
 		}
 };
 }
