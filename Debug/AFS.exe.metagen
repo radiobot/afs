@@ -15,6 +15,56 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
+Class AFS.MasPicConvn: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.Drawing.Bitmap): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Drawing.Bitmap source : Public
+    IntPtr Iptr : Public
+    System.Drawing.Imaging.BitmapData bmpData : Public
+    Byte[] Pixels : Public
+    Int32 Depth : Public
+    Int32 Width : Public
+    Int32 Height : Public
+  Methods:
+    LockBits(): PrivateScope, Public, HideBySig
+    UnlockBits(): PrivateScope, Public, HideBySig
+    GetPixel(Int32, Int32): PrivateScope, Public, HideBySig
+    SetPixel(Int32, Int32, Color): PrivateScope, Public, HideBySig
+    PicToMas(): PrivateScope, Public, HideBySig
+    MasToPic(Double[,]): PrivateScope, Public, HideBySig
+Class AFS.Frame: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Drawing.Bitmap img : Public
+    Double[,] intnsVls : Public
+    System.Drawing.Point sz : Public
+    System.Drawing.PointF cntr : Public
+  Methods:
+    getPicFile(): PrivateScope, Public, HideBySig
+    getFrmPrms(): PrivateScope, Public, HideBySig
+    cnvArPic(): PrivateScope, Public, HideBySig
+    cnvPicAr(): PrivateScope, Public, HideBySig
+Class AFS.Deformator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(AFS.Frame): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    AFS.Frame defIm : Public
+    Double HX : Public
+    Double HY : Public
+    Double ANG : Public
+    Double SC : Public
+  Methods:
+    SetParamDefaults(): PrivateScope, Public, HideBySig
+    GetParams(): PrivateScope, Public, HideBySig
+    Intp(Double[,], Double, Double): PrivateScope, Public, HideBySig
+    Deform(): PrivateScope, Public, HideBySig
+Class AFS.locationParams: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.TextBox OLVCntTextBox : Public
+    System.Windows.Forms.TextBox itCntTextBox : Public
+    System.Windows.Forms.ComboBox PFTypeComboBox : Public
 Class AFS.MessageWindow: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -22,8 +72,25 @@ Class AFS.MessageWindow: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     System.Windows.Forms.RichTextBox logTextBox : Public
   Methods:
     showMessage(String, String): PrivateScope, Public, HideBySig
+Class AFS.Globals: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    AFS.Frame sourcePic : Public, Static
+    AFS.Frame etalonFrag : Public, Static
+    Int32 OLV : Public, Static
+    Int32 iterNum : Public, Static
+    System.String pfType : Public, Static
+Class AFS.DataLoader: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getSourceImage(PictureBox): PrivateScope, Public, HideBySig
+    getEtalonFragment(PictureBox): PrivateScope, Public, HideBySig
+    getLocationParams(): PrivateScope, Public, HideBySig
 Class AFS.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     System.Windows.Forms.RichTextBox logBox : Public
+    AFS.DataLoader dld : Public
+  Methods:
+    InitializeComponent(): PrivateScope, Public, HideBySig

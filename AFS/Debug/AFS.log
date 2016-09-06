@@ -1,5 +1,9 @@
-﻿  MessageWindow.cpp
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppClean.targets(76,5): warning : Процесс не может получить доступ к файлу "d:\afs\afs\debug\afs.tlog\cl.command.1.tlog", так как этот файл используется другим процессом.
+  Deformator.cpp
+  locationParams.cpp
+  MessageWindow.cpp
   MyForm.cpp
   Создание кода...
   .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
   AFS.vcxproj -> D:\AFS\Debug\AFS.exe
+  AFS.vcxproj -> D:\AFS\Debug\AFS.pdb (Full PDB)

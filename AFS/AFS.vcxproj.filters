@@ -28,6 +28,9 @@
     <Filter Include="Header Files\Interface">
       <UniqueIdentifier>{1691b12e-ea0b-4c7d-a015-751ba4075a83}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\DataUnits">
+      <UniqueIdentifier>{967386c4-b9f7-44fa-b4fa-b14941c6c750}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyForm.cpp">
@@ -35,6 +38,12 @@
     </ClCompile>
     <ClCompile Include="MessageWindow.cpp">
       <Filter>Header Files\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Deformator.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="locationParams.cpp">
+      <Filter>Header Files\DataLoader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -44,9 +53,30 @@
     <ClInclude Include="MessageWindow.h">
       <Filter>Header Files\Interface</Filter>
     </ClInclude>
+    <ClInclude Include="DataLoader.h">
+      <Filter>Header Files\DataLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="Frame.h">
+      <Filter>Header Files\DataUnits</Filter>
+    </ClInclude>
+    <ClInclude Include="MasPicConvn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals.h">
+      <Filter>Header Files\Globals</Filter>
+    </ClInclude>
+    <ClInclude Include="Deformator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="locationParams.h">
+      <Filter>Header Files\DataLoader</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageWindow.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

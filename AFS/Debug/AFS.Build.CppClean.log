@@ -3,12 +3,13 @@ d:\afs\afs\debug\afs.myform.resources
 d:\afs\afs\debug\vc140.pdb
 d:\afs\afs\debug\myform.obj
 d:\afs\afs\debug\messagewindow.obj
+d:\afs\afs\debug\locationparams.obj
+d:\afs\afs\debug\deformator.obj
 d:\afs\afs\debug\.netframework,version=v4.5.2.assemblyattributes.obj
 d:\afs\afs\debug\.netframework,version=v4.5.2.assemblyattributes.asm
 d:\afs\debug\afs.exe
 d:\afs\debug\afs.pdb
 d:\afs\afs\debug\afs.vcxproj.generateresource.cache
-d:\afs\afs\debug\afs.vcxprojresolveassemblyreference.cache
 d:\afs\afs\debug\afs.tlog\afs.write.1u.tlog
 d:\afs\afs\debug\afs.tlog\cl.command.1.tlog
 d:\afs\afs\debug\afs.tlog\cl.read.1.tlog
@@ -18,9 +19,5 @@ d:\afs\afs\debug\afs.tlog\link.read.1.tlog
 d:\afs\afs\debug\afs.tlog\link.write.1.tlog
 d:\afs\afs\debug\afs.tlog\metagen.read.1.tlog
 d:\afs\afs\debug\afs.tlog\metagen.write.1.tlog
-d:\afs\afs\debug\afs.tlog\fltlib.dll.bi
-d:\afs\afs\debug\afs.tlog\gdi32.dll.bi
-d:\afs\afs\debug\afs.tlog\kernelbase.dll.bi
-d:\afs\afs\debug\afs.tlog\ntdll.dll.bi
+d:\afs\afs\debug\afs.tlog\rsaenh.dll.bi
 d:\afs\afs\debug\afs.tlog\tzres.dll.bi
-d:\afs\afs\debug\afs.tlog\user32.dll.bi

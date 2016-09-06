@@ -136,10 +136,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Deformator.cpp" />
+    <ClCompile Include="locationParams.cpp" />
     <ClCompile Include="MessageWindow.cpp" />
     <ClCompile Include="MyForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DataLoader.h" />
+    <ClInclude Include="Deformator.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Frame.h" />
+    <ClInclude Include="Globals.h" />
+    <ClInclude Include="locationParams.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MasPicConvn.h" />
     <ClInclude Include="MessageWindow.h">
       <FileType>CppForm</FileType>
     </ClInclude>
