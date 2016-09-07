@@ -214,7 +214,7 @@ namespace AFS {
 	private: 
 		System::Void detectFragment_Click(System::Object^  sender, System::EventArgs^  e) 
 		{
-
+			dld->getLocationParams();
 		}
 
 	private: 

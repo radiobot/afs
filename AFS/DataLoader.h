@@ -45,7 +45,9 @@ namespace AFS {
 			locationParams^ locp = gcnew locationParams();
 			if(locp->ShowDialog() == System::Windows::Forms::DialogResult::OK)
 			{
-				Globals::OLV = 
+				Globals::OLV = Int32::Parse(locp->OLVCntTextBox->Text);
+				Globals::iterNum = Int32::Parse(locp->itCntTextBox->Text);
+				Globals::pfType = locp->PFTypeComboBox->Text;
 			}
 		}
 	};
