@@ -55,9 +55,10 @@ namespace AFS {
 			// OKButton
 			// 
 			this->OKButton->DialogResult = System::Windows::Forms::DialogResult::OK;
-			this->OKButton->Location = System::Drawing::Point(319, 6);
+			this->OKButton->Location = System::Drawing::Point(239, 5);
+			this->OKButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->OKButton->Name = L"OKButton";
-			this->OKButton->Size = System::Drawing::Size(50, 92);
+			this->OKButton->Size = System::Drawing::Size(38, 75);
 			this->OKButton->TabIndex = 0;
 			this->OKButton->Text = L"OK";
 			this->OKButton->UseVisualStyleBackColor = true;
@@ -65,26 +66,29 @@ namespace AFS {
 			// OLVLabel
 			// 
 			this->OLVLabel->AutoSize = true;
-			this->OLVLabel->Location = System::Drawing::Point(12, 9);
+			this->OLVLabel->Location = System::Drawing::Point(9, 7);
+			this->OLVLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->OLVLabel->Name = L"OLVLabel";
-			this->OLVLabel->Size = System::Drawing::Size(191, 17);
+			this->OLVLabel->Size = System::Drawing::Size(149, 13);
 			this->OLVLabel->TabIndex = 1;
 			this->OLVLabel->Text = L"Объём локальной выборки:";
 			// 
 			// OLVCntTextBox
 			// 
-			this->OLVCntTextBox->Location = System::Drawing::Point(209, 6);
+			this->OLVCntTextBox->Location = System::Drawing::Point(173, 5);
+			this->OLVCntTextBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->OLVCntTextBox->Name = L"OLVCntTextBox";
-			this->OLVCntTextBox->Size = System::Drawing::Size(100, 22);
+			this->OLVCntTextBox->Size = System::Drawing::Size(60, 20);
 			this->OLVCntTextBox->TabIndex = 2;
 			this->OLVCntTextBox->Text = L"75";
 			this->OLVCntTextBox->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			// 
 			// itCntTextBox
 			// 
-			this->itCntTextBox->Location = System::Drawing::Point(209, 40);
+			this->itCntTextBox->Location = System::Drawing::Point(173, 32);
+			this->itCntTextBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->itCntTextBox->Name = L"itCntTextBox";
-			this->itCntTextBox->Size = System::Drawing::Size(100, 22);
+			this->itCntTextBox->Size = System::Drawing::Size(60, 20);
 			this->itCntTextBox->TabIndex = 4;
 			this->itCntTextBox->Text = L"400";
 			this->itCntTextBox->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
@@ -92,35 +96,38 @@ namespace AFS {
 			// itCntLabel
 			// 
 			this->itCntLabel->AutoSize = true;
-			this->itCntLabel->Location = System::Drawing::Point(12, 43);
+			this->itCntLabel->Location = System::Drawing::Point(9, 35);
+			this->itCntLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->itCntLabel->Name = L"itCntLabel";
-			this->itCntLabel->Size = System::Drawing::Size(157, 17);
+			this->itCntLabel->Size = System::Drawing::Size(160, 13);
 			this->itCntLabel->TabIndex = 3;
-			this->itCntLabel->Text = L"Количество итераций:";
+			this->itCntLabel->Text = L"Количество шагов алгоритма:";
 			// 
 			// PFTypeComboBox
 			// 
 			this->PFTypeComboBox->FormattingEnabled = true;
-			this->PFTypeComboBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) {L"СКМР", L"ВКМК", L"ВИ"});
-			this->PFTypeComboBox->Location = System::Drawing::Point(209, 74);
+			this->PFTypeComboBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"СКМР", L"ВКМК", L"ВИ" });
+			this->PFTypeComboBox->Location = System::Drawing::Point(173, 60);
+			this->PFTypeComboBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->PFTypeComboBox->Name = L"PFTypeComboBox";
-			this->PFTypeComboBox->Size = System::Drawing::Size(100, 24);
+			this->PFTypeComboBox->Size = System::Drawing::Size(60, 21);
 			this->PFTypeComboBox->TabIndex = 5;
 			// 
 			// PFTypeLabel
 			// 
 			this->PFTypeLabel->AutoSize = true;
-			this->PFTypeLabel->Location = System::Drawing::Point(12, 77);
+			this->PFTypeLabel->Location = System::Drawing::Point(9, 63);
+			this->PFTypeLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->PFTypeLabel->Name = L"PFTypeLabel";
-			this->PFTypeLabel->Size = System::Drawing::Size(180, 17);
+			this->PFTypeLabel->Size = System::Drawing::Size(136, 13);
 			this->PFTypeLabel->TabIndex = 6;
 			this->PFTypeLabel->Text = L"Тип функции приоритета:";
 			// 
 			// locationParams
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(381, 111);
+			this->ClientSize = System::Drawing::Size(286, 90);
 			this->ControlBox = false;
 			this->Controls->Add(this->PFTypeLabel);
 			this->Controls->Add(this->PFTypeComboBox);
@@ -129,13 +136,14 @@ namespace AFS {
 			this->Controls->Add(this->OLVCntTextBox);
 			this->Controls->Add(this->OLVLabel);
 			this->Controls->Add(this->OKButton);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"locationParams";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Параметры алгоритма поиска";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
-			}
+		}
 #pragma endregion
 	};
 }
