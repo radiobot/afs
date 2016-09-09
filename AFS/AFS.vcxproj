@@ -146,6 +146,7 @@
     <ClInclude Include="Deformator.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Estimator.h" />
     <ClInclude Include="Frame.h" />
     <ClInclude Include="Globals.h" />
     <ClInclude Include="Interpolator.h" />

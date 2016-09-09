@@ -2,8 +2,7 @@
 #include "Globals.h"
 #include "Interpolator.h"
 #include "LocSamp.h"
-#include <cliext/vector>
-using namespace cliext;
+#include "Estimator.h"
 
 namespace AFS {
 
@@ -14,36 +13,33 @@ namespace AFS {
 			{
 				intp = gcnew Interpolator();
 				lcs = gcnew LocSamp();
+				estr = gcnew Estimator();
 			}
 
 		public:
 
+			// Интерполяция билинейная
+			Interpolator^ intp;
+			// Локальная выборка
+			LocSamp^ lcs;
+			// Оценивание параметров
+			Estimator^ estr;
+
 			// Массив значений яркости
 			array<double, 2>^ intnsVals;
 
-			// Интерполяция билинейная
-			Interpolator^ intp;
-
-			// Локальная выборка
-			LocSamp^ lcs;
-
 			// Количество итераций
 			int itNum;
-
 			// Значение ФП
 			double pF;
 
-			// Векторы оценок параметров:
-			
+			// Векторы оценок параметров:		
 			// Сдвиг по горизонтали
 			float hx;
-
 			// Сдвиг по вертикали
 			float hy;
-
 			// Угол поворота
 			float ang;
-
 			// Масштабирование
 			float sc;
 
@@ -68,8 +64,8 @@ namespace AFS {
 					lcs->srcVals[m] = intnsVals[lcs->srcCrd[m].X, lcs->srcCrd[m].Y];
 
 					// Вычисление координат точек эталонного фрагмента
-					lcs->etCrd[m].X = safe_cast<float>(lcs->srcCrd[m].X) + hx;
-					lcs->etCrd[m].Y = safe_cast<float>(lcs->srcCrd[m].Y) + hy;
+					lcs->etCrd[m].X = safe_cast<float>(lcs->srcCrd[m].X) + estr->hx;
+					lcs->etCrd[m].Y = safe_cast<float>(lcs->srcCrd[m].Y) + estr->hy;
 
 					// Вычисление значения яркости точки эталонного фрагмента
 					lcs->etVals[m] = intp->getIntpVal(Globals::etalonFrag->intnsVls, 
@@ -80,8 +76,8 @@ namespace AFS {
 			
 			// Оценивание параметров
 			void getEstims()
-			{
-
+			{	
+				estr->runEstimation();
 			}
 
 			// Вычисление значения ФП

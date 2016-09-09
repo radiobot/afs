@@ -83,6 +83,9 @@
     <ClInclude Include="Interpolator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Estimator.h">
+      <Filter>Header Files\FragLocator</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">
