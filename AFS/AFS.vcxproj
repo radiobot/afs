@@ -148,9 +148,11 @@
     </ClInclude>
     <ClInclude Include="Frame.h" />
     <ClInclude Include="Globals.h" />
+    <ClInclude Include="Interpolator.h" />
     <ClInclude Include="locationParams.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="LocSamp.h" />
     <ClInclude Include="MasPicConvn.h" />
     <ClInclude Include="MessageWindow.h">
       <FileType>CppForm</FileType>
@@ -158,14 +160,25 @@
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="PGP.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="locationParams.resx">
+      <DependentUpon>locationParams.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MessageWindow.resx">
       <DependentUpon>MessageWindow.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AFS.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\srcfiles\RM.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

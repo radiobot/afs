@@ -1,4 +1,5 @@
 #pragma once
+#include "Globals.h"
 #include "MessageWindow.h"
 #include "DataLoader.h"
 
@@ -19,6 +20,8 @@ namespace AFS {
 			InitializeComponent();
 
 			dld = gcnew DataLoader();
+
+			Globals::rnd = gcnew Random();
 		}
 
 	protected:

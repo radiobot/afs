@@ -22,5 +22,8 @@ namespace AFS {
 		static int iterNum;
 
 		static String^ pfType;
+
+		// Генератор случайных значений, инициализируется в главном файле MyForm.h
+		static Random^ rnd;
 	};
 }

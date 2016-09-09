@@ -1,3 +1,4 @@
+  AFS.locationParams.resources - Embedded, ContainedInManifestFile, 
   AFS.MessageWindow.resources - Embedded, ContainedInManifestFile, 
   AFS.MyForm.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
@@ -80,6 +81,7 @@ Class AFS.Globals: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Int32 OLV : Public, Static
     Int32 iterNum : Public, Static
     System.String pfType : Public, Static
+    System.Random rnd : Public, Static
 Class AFS.DataLoader: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
