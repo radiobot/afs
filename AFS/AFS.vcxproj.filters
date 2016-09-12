@@ -110,6 +110,9 @@
     <ClInclude Include="FragBoundsDrawer.h">
       <Filter>Header Files\OutcomePresenter</Filter>
     </ClInclude>
+    <ClInclude Include="OutDataCollector.h">
+      <Filter>Header Files\OutcomePresenter</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">

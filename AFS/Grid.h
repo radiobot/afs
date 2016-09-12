@@ -87,7 +87,10 @@ namespace AFS {
 
 				verIndex.X = vic->getVeritasIndex(node).X;
 				verIndex.Y = vic->getVeritasIndex(node).Y;
-			}		
+			}
+
+			verIndex.X = vic->getMaxIterIndex(node).X;
+			verIndex.Y = vic->getMaxIterIndex(node).Y;
 		}
 
 		// Поиск "истинной" процедуры

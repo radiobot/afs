@@ -3,6 +3,7 @@
 #include "MessageWindow.h"
 #include "DataLoader.h"
 #include "Grid.h"
+#include "FragBoundsDrawer.h"
 
 namespace AFS {
 
@@ -25,6 +26,8 @@ namespace AFS {
 			Globals::rnd = gcnew Random();
 
 			grd = gcnew Grid();
+
+			fbd = gcnew FragBoundsDrawer(mainPictureBox);
 		}
 
 	protected:
@@ -54,8 +57,9 @@ namespace AFS {
 
 	public:
 		DataLoader^ dld;
-
 		Grid^ grd;
+		FragBoundsDrawer^ fbd;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -224,7 +228,8 @@ namespace AFS {
 		{
 			dld->getLocationParams();
 			grd->getVeritasPGP();
-			// Отрисовка границ фрагмента
+			fbd->getFragCrnrs(grd->verIndex);
+			fbd->drawFragBounds();
 		}
 
 	private: 

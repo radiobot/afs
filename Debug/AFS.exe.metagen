@@ -166,6 +166,7 @@ Class AFS.VerIndexCalculator: AutoLayout, AnsiClass, Class, Public, BeforeFieldI
     getVeritasIndex(PGP[,]): PrivateScope, Public, HideBySig
     getMaxIndex(PGP[,]): PrivateScope, Public, HideBySig
     getMinIndex(PGP[,]): PrivateScope, Public, HideBySig
+    getMaxIterIndex(PGP[,]): PrivateScope, Public, HideBySig
 Class AFS.Grid: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
@@ -179,6 +180,14 @@ Class AFS.Grid: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     primaryGridBypass(): PrivateScope, Public, HideBySig
     detectVeritasPGP(): PrivateScope, Public, HideBySig
     getVeritasPGP(): PrivateScope, Public, HideBySig
+Class AFS.FragBoundsDrawer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.Windows.Forms.PictureBox): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.PictureBox pbx : Public
+    System.Drawing.PointF[] crnCrds : Public
+  Methods:
+    getFragCrnrs(Point): PrivateScope, Public, HideBySig
+    drawFragBounds(): PrivateScope, Public, HideBySig
 Class AFS.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -186,5 +195,6 @@ Class AFS.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     System.Windows.Forms.RichTextBox logBox : Public
     AFS.DataLoader dld : Public
     AFS.Grid grd : Public
+    AFS.FragBoundsDrawer fbd : Public
   Methods:
     InitializeComponent(): PrivateScope, Public, HideBySig

@@ -64,5 +64,24 @@ namespace AFS {
 			return min;
 		}
 
+		Point getMaxIterIndex(array<PGP^, 2>^ grid)
+		{
+			Point max;
+			double maxVal = grid[0, 0]->itNum;
+			for (int i = 0; i < grid->GetLength(0); i++)
+			{
+				for (int j = 0; j < grid->GetLength(1); j++)
+				{
+					if (grid[i, j]->itNum > maxVal)
+					{
+						max.X = i;
+						max.Y = j;
+						maxVal = grid[i, j]->itNum;
+					}
+				}
+			}
+			return max;
+		}
+
 	};
 }

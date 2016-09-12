@@ -164,6 +164,7 @@
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="OutDataCollector.h" />
     <ClInclude Include="PGP.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="SKMRCalculator.h" />
