@@ -10,7 +10,7 @@ namespace AFS {
 		public:
 			LocSamp()
 			{
-				srcCrd = gcnew array<PointF>(Globals::OLV);
+				srcCrd = gcnew array<Point>(Globals::OLV);
 				etCrd = gcnew array<PointF>(Globals::OLV);
 				srcVals = gcnew array<double>(Globals::OLV);
 				etVals = gcnew array<double>(Globals::OLV);
@@ -19,7 +19,7 @@ namespace AFS {
 		public:
 
 			// координаты точек на исходном изображении
-			array<PointF>^ srcCrd;
+			array<Point>^ srcCrd;
 
 			// координаты точек на эталонном фрагменте
 			array<PointF>^ etCrd;

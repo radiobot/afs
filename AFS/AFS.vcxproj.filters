@@ -83,6 +83,33 @@
     <ClInclude Include="Interpolator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SKMREstimator.h">
+      <Filter>Header Files\FragLocator</Filter>
+    </ClInclude>
+    <ClInclude Include="MIEstimator.h">
+      <Filter>Header Files\FragLocator</Filter>
+    </ClInclude>
+    <ClInclude Include="VKMKEstimator.h">
+      <Filter>Header Files\FragLocator</Filter>
+    </ClInclude>
+    <ClInclude Include="SKMRCalculator.h">
+      <Filter>Header Files\FragLocator</Filter>
+    </ClInclude>
+    <ClInclude Include="VKMKCalculator.h">
+      <Filter>Header Files\FragLocator</Filter>
+    </ClInclude>
+    <ClInclude Include="MICalculator.h">
+      <Filter>Header Files\FragLocator</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid.h">
+      <Filter>Header Files\DataUnits</Filter>
+    </ClInclude>
+    <ClInclude Include="VerIndexCalculator.h">
+      <Filter>Header Files\FragLocator</Filter>
+    </ClInclude>
+    <ClInclude Include="FragBoundsDrawer.h">
+      <Filter>Header Files\OutcomePresenter</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">

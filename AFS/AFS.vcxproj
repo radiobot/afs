@@ -146,8 +146,10 @@
     <ClInclude Include="Deformator.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="FragBoundsDrawer.h" />
     <ClInclude Include="Frame.h" />
     <ClInclude Include="Globals.h" />
+    <ClInclude Include="Grid.h" />
     <ClInclude Include="Interpolator.h" />
     <ClInclude Include="locationParams.h">
       <FileType>CppForm</FileType>
@@ -157,11 +159,18 @@
     <ClInclude Include="MessageWindow.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MICalculator.h" />
+    <ClInclude Include="MIEstimator.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="PGP.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="SKMRCalculator.h" />
+    <ClInclude Include="SKMREstimator.h" />
+    <ClInclude Include="VerIndexCalculator.h" />
+    <ClInclude Include="VKMKCalculator.h" />
+    <ClInclude Include="VKMKEstimator.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="locationParams.resx">

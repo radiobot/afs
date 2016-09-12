@@ -88,11 +88,103 @@ Class AFS.DataLoader: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     getSourceImage(PictureBox): PrivateScope, Public, HideBySig
     getEtalonFragment(PictureBox): PrivateScope, Public, HideBySig
     getLocationParams(): PrivateScope, Public, HideBySig
+Class AFS.Interpolator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getIntpVal(Double[,], Single, Single): PrivateScope, Public, HideBySig
+Class AFS.LocSamp: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Drawing.Point[] srcCrd : Public
+    System.Drawing.PointF[] etCrd : Public
+    Double[] srcVals : Public
+    Double[] etVals : Public
+Class AFS.SKMREstimator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Single hx : Public
+    Single hy : Public
+    Single ang : Public
+    Single sc : Public
+    AFS.Interpolator intp : Public
+    Single step_hx : Public, Static
+    Single step_hy : Public, Static
+    Single step_ang : Public, Static
+    Single step_scale : Public, Static
+  Methods:
+    runEstimation(LocSamp): PrivateScope, Public, HideBySig
+Class AFS.VKMKEstimator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Single hx : Public
+    Single hy : Public
+    Single ang : Public
+    Single sc : Public
+  Methods:
+    runEstimation(LocSamp): PrivateScope, Public, HideBySig
+Class AFS.MIEstimator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Single hx : Public
+    Single hy : Public
+    Single ang : Public
+    Single sc : Public
+  Methods:
+    runEstimation(LocSamp): PrivateScope, Public, HideBySig
+Class AFS.SKMRCalculator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getSKMR(LocSamp): PrivateScope, Public, HideBySig
+Class AFS.VKMKCalculator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getVKMK(LocSamp): PrivateScope, Public, HideBySig
+Class AFS.MICalculator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getMI(LocSamp): PrivateScope, Public, HideBySig
+Class AFS.PGP: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    AFS.Interpolator intp : Public
+    AFS.LocSamp lcs : Public
+    Double[,] intnsVals : Public
+    Int32 itNum : Public
+    Double pF : Public
+    Single hx : Public
+    Single hy : Public
+    Single ang : Public
+    Single sc : Public
+  Methods:
+    runIteration(): PrivateScope, Public, HideBySig
+    getLocSamp(): PrivateScope, Public, HideBySig
+    getEstims(): PrivateScope, Public, HideBySig
+    getPFValue(): PrivateScope, Public, HideBySig
+Class AFS.VerIndexCalculator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getVeritasIndex(PGP[,]): PrivateScope, Public, HideBySig
+    getMaxIndex(PGP[,]): PrivateScope, Public, HideBySig
+    getMinIndex(PGP[,]): PrivateScope, Public, HideBySig
+Class AFS.Grid: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    AFS.PGP[,] node : Public
+    Int32 ttlNodeCnt : Public
+    System.Drawing.Point grSz : Public
+    System.Drawing.Point verIndex : Public
+    AFS.VerIndexCalculator vic : Public
+  Methods:
+    initGrid(): PrivateScope, Public, HideBySig
+    primaryGridBypass(): PrivateScope, Public, HideBySig
+    detectVeritasPGP(): PrivateScope, Public, HideBySig
+    getVeritasPGP(): PrivateScope, Public, HideBySig
 Class AFS.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     System.Windows.Forms.RichTextBox logBox : Public
     AFS.DataLoader dld : Public
+    AFS.Grid grd : Public
   Methods:
     InitializeComponent(): PrivateScope, Public, HideBySig

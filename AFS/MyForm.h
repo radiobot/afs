@@ -2,6 +2,7 @@
 #include "Globals.h"
 #include "MessageWindow.h"
 #include "DataLoader.h"
+#include "Grid.h"
 
 namespace AFS {
 
@@ -22,6 +23,8 @@ namespace AFS {
 			dld = gcnew DataLoader();
 
 			Globals::rnd = gcnew Random();
+
+			grd = gcnew Grid();
 		}
 
 	protected:
@@ -51,6 +54,8 @@ namespace AFS {
 
 	public:
 		DataLoader^ dld;
+
+		Grid^ grd;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -218,12 +223,17 @@ namespace AFS {
 		System::Void detectFragment_Click(System::Object^  sender, System::EventArgs^  e) 
 		{
 			dld->getLocationParams();
+			grd->getVeritasPGP();
+			// Отрисовка границ фрагмента
 		}
 
 	private: 
 		System::Void showPlots_Click(System::Object^  sender, System::EventArgs^  e) 
 		{
-
+			/*
+				1. Собрать данные
+				2. Вызвать графикопостроитель
+			*/
 		}
 
 	private: 

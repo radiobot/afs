@@ -2,6 +2,14 @@
   locationParams.cpp
   MessageWindow.cpp
   MyForm.cpp
+d:\afs\afs\SKMREstimator.h(19): warning C4305: инициализация: усечение из "double" к "float"
+  d:\afs\afs\SKMREstimator.h(19): note: Сообщение диагностики возникло в созданной компилятором функции "void AFS::SKMREstimator::SKMREstimator(void)"
+d:\afs\afs\SKMREstimator.h(20): warning C4305: инициализация: усечение из "double" к "float"
+  d:\afs\afs\SKMREstimator.h(20): note: Сообщение диагностики возникло в созданной компилятором функции "void AFS::SKMREstimator::SKMREstimator(void)"
+d:\afs\afs\SKMREstimator.h(21): warning C4305: инициализация: усечение из "double" к "float"
+  d:\afs\afs\SKMREstimator.h(21): note: Сообщение диагностики возникло в созданной компилятором функции "void AFS::SKMREstimator::SKMREstimator(void)"
+d:\afs\afs\SKMREstimator.h(22): warning C4305: инициализация: усечение из "double" к "float"
+  d:\afs\afs\SKMREstimator.h(22): note: Сообщение диагностики возникло в созданной компилятором функции "void AFS::SKMREstimator::SKMREstimator(void)"
   Создание кода...
   .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
   AFS.vcxproj -> D:\AFS\Debug\AFS.exe
