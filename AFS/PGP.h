@@ -8,6 +8,8 @@
 #include "SKMRCalculator.h"
 #include "VKMKCalculator.h"
 #include "MICalculator.h"
+#include <cliext\vector>
+using namespace cliext;
 
 namespace AFS {
 
@@ -18,6 +20,8 @@ namespace AFS {
 			{
 				intp = gcnew Interpolator();
 				lcs = gcnew LocSamp();
+				hxVals = gcnew vector<double>();
+				hyVals = gcnew vector<double>();
 			}
 
 		public:
@@ -27,11 +31,15 @@ namespace AFS {
 			// Локальная выборка
 			LocSamp^ lcs;
 
+			// векторы оценок параметров
+			vector<double> hxVals;
+			vector<double> hyVals;
+
 			// Массив значений яркости
 			array<double, 2>^ intnsVals;
 
 			// Количество итераций
-			int itNum;
+			double itNum;
 			// Значение ФП
 			double pF;
 
@@ -118,6 +126,8 @@ namespace AFS {
 					ang += miEst->ang;
 					sc += miEst->sc;
 				}
+				hxVals.push_back(hx);
+				hyVals.push_back(hy);
 			}
 
 			// Вычисление значения ФП

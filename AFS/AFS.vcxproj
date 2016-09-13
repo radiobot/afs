@@ -134,12 +134,16 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph">
+      <HintPath>..\srcfiles\ZedGraph.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Deformator.cpp" />
     <ClCompile Include="locationParams.cpp" />
     <ClCompile Include="MessageWindow.cpp" />
     <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="PlotCanvas.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataLoader.h" />
@@ -166,6 +170,10 @@
     </ClInclude>
     <ClInclude Include="OutDataCollector.h" />
     <ClInclude Include="PGP.h" />
+    <ClInclude Include="PlotCanvas.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Plotter.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="SKMRCalculator.h" />
     <ClInclude Include="SKMREstimator.h" />
@@ -182,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlotCanvas.resx">
+      <DependentUpon>PlotCanvas.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

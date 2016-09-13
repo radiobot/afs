@@ -4,6 +4,7 @@
 #include "DataLoader.h"
 #include "Grid.h"
 #include "FragBoundsDrawer.h"
+#include "OutDataCollector.h"
 
 namespace AFS {
 
@@ -59,6 +60,7 @@ namespace AFS {
 		DataLoader^ dld;
 		Grid^ grd;
 		FragBoundsDrawer^ fbd;
+		OutDataCollector^ odc;
 
 
 #pragma region Windows Form Designer generated code
@@ -235,10 +237,12 @@ namespace AFS {
 	private: 
 		System::Void showPlots_Click(System::Object^  sender, System::EventArgs^  e) 
 		{
-			/*
-				1. Собрать данные
-				2. Вызвать графикопостроитель
-			*/
+			// Собрать данные с сетки:
+			odc = gcnew OutDataCollector(grd);
+			odc->getOutData(grd);
+
+			// Вызвать графикопостроитель
+
 		}
 
 	private: 

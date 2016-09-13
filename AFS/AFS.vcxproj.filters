@@ -45,6 +45,9 @@
     <ClCompile Include="locationParams.cpp">
       <Filter>Header Files\DataLoader</Filter>
     </ClCompile>
+    <ClCompile Include="PlotCanvas.cpp">
+      <Filter>Header Files\OutcomePresenter</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -111,6 +114,12 @@
       <Filter>Header Files\OutcomePresenter</Filter>
     </ClInclude>
     <ClInclude Include="OutDataCollector.h">
+      <Filter>Header Files\OutcomePresenter</Filter>
+    </ClInclude>
+    <ClInclude Include="PlotCanvas.h">
+      <Filter>Header Files\OutcomePresenter</Filter>
+    </ClInclude>
+    <ClInclude Include="Plotter.h">
       <Filter>Header Files\OutcomePresenter</Filter>
     </ClInclude>
   </ItemGroup>
