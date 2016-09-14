@@ -5,6 +5,7 @@
 #include "Grid.h"
 #include "FragBoundsDrawer.h"
 #include "OutDataCollector.h"
+#include "Plotter.h"
 
 namespace AFS {
 
@@ -61,7 +62,7 @@ namespace AFS {
 		Grid^ grd;
 		FragBoundsDrawer^ fbd;
 		OutDataCollector^ odc;
-
+		Plotter^ plt;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -242,7 +243,7 @@ namespace AFS {
 			odc->getOutData(grd);
 
 			// Вызвать графикопостроитель
-
+			plt = gcnew Plotter();
 		}
 
 	private: 
