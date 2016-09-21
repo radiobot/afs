@@ -243,7 +243,8 @@ namespace AFS {
 			odc->getOutData(grd);
 
 			// Вызвать графикопостроитель
-			plt = gcnew Plotter();
+			plt = gcnew Plotter(odc);
+			plt->showPaintedCanvas();
 		}
 
 	private: 

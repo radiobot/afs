@@ -126,8 +126,8 @@ namespace AFS {
 					ang += miEst->ang;
 					sc += miEst->sc;
 				}
-				hxVals.push_back(hx);
-				hyVals.push_back(hy);
+				hxVals.push_back(-hx);
+				hyVals.push_back(-hy);
 			}
 
 			// Вычисление значения ФП

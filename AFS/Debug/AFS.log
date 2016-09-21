@@ -14,6 +14,7 @@ d:\afs\afs\PGP.h(35): warning C4677: hxVals: сигнатура члена, не
 d:\afs\afs\PGP.h(36): warning C4677: hyVals: сигнатура члена, не являющегося частным, содержит частный тип сборки "cliext::vector<double>"
 d:\afs\afs\OutDataCollector.h(38): warning C4677: hxVals: сигнатура члена, не являющегося частным, содержит частный тип сборки "cliext::vector<double>"
 d:\afs\afs\OutDataCollector.h(39): warning C4677: hyVals: сигнатура члена, не являющегося частным, содержит частный тип сборки "cliext::vector<double>"
+d:\afs\afs\Plotter.h(72): warning C4677: drawPlot: сигнатура члена, не являющегося частным, содержит частный тип сборки "cliext::vector<double>"
   PlotCanvas.cpp
   Создание кода...
   .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
