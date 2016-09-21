@@ -90,7 +90,7 @@ namespace AFS {
 			this->itCntTextBox->Name = L"itCntTextBox";
 			this->itCntTextBox->Size = System::Drawing::Size(60, 20);
 			this->itCntTextBox->TabIndex = 4;
-			this->itCntTextBox->Text = L"400";
+			this->itCntTextBox->Text = L"4000";
 			this->itCntTextBox->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			// 
 			// itCntLabel

@@ -22,6 +22,8 @@ namespace AFS {
 				lcs = gcnew LocSamp();
 				hxVals = gcnew vector<double>();
 				hyVals = gcnew vector<double>();
+				angVals = gcnew vector<double>();
+				scVals = gcnew vector<double>();
 			}
 
 		public:
@@ -34,6 +36,8 @@ namespace AFS {
 			// векторы оценок параметров
 			vector<double> hxVals;
 			vector<double> hyVals;
+			vector<double> angVals;
+			vector<double> scVals;
 
 			// Массив значений яркости
 			array<double, 2>^ intnsVals;
@@ -126,8 +130,10 @@ namespace AFS {
 					ang += miEst->ang;
 					sc += miEst->sc;
 				}
-				hxVals.push_back(hx);
-				hyVals.push_back(hy);
+				hxVals.push_back(-hx);
+				hyVals.push_back(-hy);
+				angVals.push_back(ang);
+				scVals.push_back(sc);
 			}
 
 			// Вычисление значения ФП

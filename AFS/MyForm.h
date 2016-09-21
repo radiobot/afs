@@ -250,7 +250,8 @@ namespace AFS {
 	private: 
 		System::Void showHelp_Click(System::Object^  sender, System::EventArgs^  e) 
 		{
-			
+			MessageWindow^ mw = gcnew MessageWindow();
+			mw->showMessage("О программе", "Программа предназначена для автоматического поиска фрагмента на большом изображении и не может быть использована в коммерческих целях.(с) 2016");
 		}
 };
 }

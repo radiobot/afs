@@ -30,8 +30,8 @@ namespace AFS {
 			//Пcевдоградиент
 			float pg_hx = 0;
 			float pg_hy = 0;
-			// float pg_ang;
-			// float pg_sc;
+			float pg_ang = 0;
+			float pg_sc = 0;
 
 			for (int m = 0; m < Globals::OLV; m++)
 			{
@@ -54,12 +54,19 @@ namespace AFS {
 				float dQ_hx = (iCenter - safe_cast<float>(lcs->srcVals[m])) * (iRight - iLeft);
 				float dQ_hy = (iCenter - safe_cast<float>(lcs->srcVals[m])) * (iBottom - iTop);
 
+				float dQ_ang = 0;
+				float dQ_sc = 0;
+
 				pg_hx += dQ_hx;
 				pg_hy += dQ_hy;
+				pg_ang += dQ_ang;
+				pg_sc += dQ_sc;
 			}
 
 			hx -= Math::Sign(pg_hx) * step_hx;
 			hy -= Math::Sign(pg_hy) * step_hy;
+			ang -= Math::Sign(pg_ang) * step_ang;
+			sc -= Math::Sign(pg_sc) * step_scale;
 		}
 
 	};

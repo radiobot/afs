@@ -33,6 +33,8 @@ namespace AFS {
 		{
 			drawPlot(pc->zedGraphConvergenceHX, odc->hxVals);
 			drawPlot(pc->zedGraphConvergenceHY, odc->hyVals);
+			drawPlot(pc->zedGraphConvergenceANG, odc->angVals);
+			drawPlot(pc->zedGraphConvergenceSC, odc->scVals);
 		}
 
 		void showPaintedCanvas()
@@ -46,9 +48,6 @@ namespace AFS {
 			{
 				// ѕолучим панель дл€ рисовани€
 				GraphPane^ pane = zG->GraphPane;
-
-				// ќчистим список кривых на тот случай, если до этого сигналы уже были нарисованы
-				pane->CurveList->Clear();
 
 				pane->XAxis->Max = histBarVals->GetLength(0)-0.5;
 
@@ -76,9 +75,6 @@ namespace AFS {
 				// ѕолучим панель дл€ рисовани€
 				GraphPane^ pane = zG->GraphPane;
 
-				// ќчистим список кривых на тот случай, если до этого сигналы уже были нарисованы
-				pane->CurveList->Clear();
-
 				// ”станавливаем интервалы по оси X
 				pane->XAxis->Min = 0;
 				pane->XAxis->Max = estVals.size();
@@ -91,7 +87,8 @@ namespace AFS {
 				}
 
 				LineItem^ myCurve = pane->AddCurve(nullptr, list, Color::Blue, SymbolType::None);
-				myCurve->Line->Width = 2;
+
+				myCurve->Line->Width = 3;
 				
 				myCurve->Line->IsSmooth = true;
 

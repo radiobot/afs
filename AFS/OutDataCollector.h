@@ -17,6 +17,8 @@ namespace AFS {
 			pFValDistrRanged = gcnew array<double>(node->ttlNodeCnt);
 			hxVals = gcnew vector<double>();
 			hyVals = gcnew vector<double>();
+			angVals = gcnew vector<double>();
+			scVals = gcnew vector<double>();
 		}
 
 	public:
@@ -37,6 +39,8 @@ namespace AFS {
 		// Векторы значений оценок параметров для V-ПГП
 		vector<double> hxVals;
 		vector<double> hyVals;
+		vector<double> angVals;
+		vector<double> scVals;
 
 		// Обработка:
 		// Получение данных из сетки ПГП
@@ -80,6 +84,8 @@ namespace AFS {
 			getRangedArray(numItDistr, numItDistrRanged);
 			hxVals = node->node[node->verIndex.X, node->verIndex.Y]->hxVals;
 			hyVals = node->node[node->verIndex.X, node->verIndex.Y]->hyVals;
+			angVals = node->node[node->verIndex.X, node->verIndex.Y]->angVals;
+			scVals = node->node[node->verIndex.X, node->verIndex.Y]->scVals;
 		}
 
 	};

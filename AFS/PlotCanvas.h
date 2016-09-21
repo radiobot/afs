@@ -71,6 +71,10 @@ namespace AFS {
 		// Изменим тест надписи по оси Y
 		pane->YAxis->Title = OYName;
 
+		// Включаем отображение сетки
+		pane->XAxis->IsShowGrid = true;
+		pane->YAxis->IsShowGrid = true;
+
 		// Включаем отображение сетки напротив крупных рисок по оси X
 		pane->XAxis->GridDashOn = true;
 
@@ -101,10 +105,10 @@ namespace AFS {
 
 	public: void getPreparedCanvas()
 		{
-			prepGraphCanvasZG(zedGraphPFDistr, "Распределение функции приоритета", "№ ПГП", "Значение ФП");
-			prepGraphCanvasZG(zedGraphPFDistrRanged, "Распределение функции приоритета (по убыванию)", "№ ПГП", "Значение ФП");
+			prepGraphCanvasZG(zedGraphPFDistr, "Распределение значений функции приоритета", "№ ПГП", "Значение ФП");
+			prepGraphCanvasZG(zedGraphPFDistrRanged, "Распределение значений функции приоритета по убыванию", "№ ПГП", "Значение ФП");
 			prepGraphCanvasZG(zedGraphItNumDistr, "Распределение количества итераций", "№ ПГП", "Количество итераций");
-			prepGraphCanvasZG(zedGraphItNumDistrRanged, "Распределение количества итераций (по убыванию)", "№ ПГП", "Количество итераций");
+			prepGraphCanvasZG(zedGraphItNumDistrRanged, "Распределение количества итераций по убыванию", "№ ПГП", "Количество итераций");
 			prepGraphCanvasZG(zedGraphConvergenceHX, "Сходимость оценок сдвига по горизонтали", "№ итерации", "Значение оценки");
 			prepGraphCanvasZG(zedGraphConvergenceHY, "Сходимость оценок сдвига по вертикали", "№ итерации", "Значение оценки");
 			prepGraphCanvasZG(zedGraphConvergenceANG, "Сходимость оценок угла поворота", "№ итерации", "Значение оценки");
