@@ -132,8 +132,11 @@ namespace AFS {
 				}
 				hxVals.push_back(-hx);
 				hyVals.push_back(-hy);
+<<<<<<< HEAD
 				angVals.push_back(ang);
 				scVals.push_back(sc);
+=======
+>>>>>>> 7e9d8f6c4a7a07220be02d9ff7b1e7a1c563f743
 			}
 
 			// Вычисление значения ФП

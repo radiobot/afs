@@ -10,6 +10,7 @@ d:\afs\afs\SKMREstimator.h(21): warning C4305: инициализация: ус�
   d:\afs\afs\SKMREstimator.h(21): note: Сообщение диагностики возникло в созданной компилятором функции "void AFS::SKMREstimator::SKMREstimator(void)"
 d:\afs\afs\SKMREstimator.h(22): warning C4305: инициализация: усечение из "double" к "float"
   d:\afs\afs\SKMREstimator.h(22): note: Сообщение диагностики возникло в созданной компилятором функции "void AFS::SKMREstimator::SKMREstimator(void)"
+<<<<<<< HEAD
 d:\afs\afs\PGP.h(37): warning C4677: hxVals: сигнатура члена, не являющегося частным, содержит частный тип сборки "cliext::vector<double>"
   d:\afs\afs\PGP.h(37): note:  см. объявление "cliext::vector<double>"
 d:\afs\afs\PGP.h(38): warning C4677: hyVals: сигнатура члена, не являющегося частным, содержит частный тип сборки "cliext::vector<double>"
@@ -28,8 +29,14 @@ d:\afs\afs\OutDataCollector.h(43): warning C4677: scVals: сигнатура ч�
   d:\afs\afs\PGP.h(37): note:  см. объявление "cliext::vector<double>"
 d:\afs\afs\Plotter.h(74): warning C4677: drawPlot: сигнатура члена, не являющегося частным, содержит частный тип сборки "cliext::vector<double>"
   d:\afs\afs\PGP.h(37): note:  см. объявление "cliext::vector<double>"
+=======
+d:\afs\afs\PGP.h(35): warning C4677: hxVals: сигнатура члена, не являющегося частным, содержит частный тип сборки "cliext::vector<double>"
+d:\afs\afs\PGP.h(36): warning C4677: hyVals: сигнатура члена, не являющегося частным, содержит частный тип сборки "cliext::vector<double>"
+d:\afs\afs\OutDataCollector.h(38): warning C4677: hxVals: сигнатура члена, не являющегося частным, содержит частный тип сборки "cliext::vector<double>"
+d:\afs\afs\OutDataCollector.h(39): warning C4677: hyVals: сигнатура члена, не являющегося частным, содержит частный тип сборки "cliext::vector<double>"
+d:\afs\afs\Plotter.h(72): warning C4677: drawPlot: сигнатура члена, не являющегося частным, содержит частный тип сборки "cliext::vector<double>"
+>>>>>>> 7e9d8f6c4a7a07220be02d9ff7b1e7a1c563f743
   PlotCanvas.cpp
   Создание кода...
   .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
   AFS.vcxproj -> D:\AFS\Debug\AFS.exe
-  AFS.vcxproj -> D:\AFS\Debug\AFS.pdb (Full PDB)
