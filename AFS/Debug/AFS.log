@@ -2,6 +2,10 @@
   locationParams.cpp
   MessageWindow.cpp
   MyForm.cpp
+d:\afs\afs\SKMREstimator.h(65): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+d:\afs\afs\SKMREstimator.h(70): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+d:\afs\afs\SKMREstimator.h(75): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+d:\afs\afs\SKMREstimator.h(80): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
 d:\afs\afs\SKMREstimator.h(19): warning C4305: инициализация: усечение из "double" к "float"
   d:\afs\afs\SKMREstimator.h(19): note: Сообщение диагностики возникло в созданной компилятором функции "void AFS::SKMREstimator::SKMREstimator(void)"
 d:\afs\afs\SKMREstimator.h(20): warning C4305: инициализация: усечение из "double" к "float"
@@ -18,6 +22,8 @@ d:\afs\afs\PGP.h(39): warning C4677: angVals: сигнатура члена, н�
   d:\afs\afs\PGP.h(37): note:  см. объявление "cliext::vector<double>"
 d:\afs\afs\PGP.h(40): warning C4677: scVals: сигнатура члена, не являющегося частным, содержит частный тип сборки "cliext::vector<double>"
   d:\afs\afs\PGP.h(37): note:  см. объявление "cliext::vector<double>"
+d:\afs\afs\PGP.h(88): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+d:\afs\afs\PGP.h(96): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
 d:\afs\afs\OutDataCollector.h(40): warning C4677: hxVals: сигнатура члена, не являющегося частным, содержит частный тип сборки "cliext::vector<double>"
   d:\afs\afs\PGP.h(37): note:  см. объявление "cliext::vector<double>"
 d:\afs\afs\OutDataCollector.h(41): warning C4677: hyVals: сигнатура члена, не являющегося частным, содержит частный тип сборки "cliext::vector<double>"

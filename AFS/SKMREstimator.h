@@ -37,25 +37,55 @@ namespace AFS {
 			{
 
 				float iLeft = safe_cast<float>(intp->getIntpVal(Globals::etalonFrag->intnsVls,
-																lcs->etCrd[m].X - 1, lcs->etCrd[m].Y));
+																lcs->etCrd[m].X - 1, 
+																lcs->etCrd[m].Y));
 
 				float iRight = safe_cast<float>(intp->getIntpVal(Globals::etalonFrag->intnsVls,
-																 lcs->etCrd[m].X + 1, lcs->etCrd[m].Y));
+																 lcs->etCrd[m].X + 1, 
+																 lcs->etCrd[m].Y));
 
 				float iTop = safe_cast<float>(intp->getIntpVal(Globals::etalonFrag->intnsVls,
-															   lcs->etCrd[m].X - 1, lcs->etCrd[m].Y - 1));
+															   lcs->etCrd[m].X - 1, 
+															   lcs->etCrd[m].Y - 1));
 
 				float iBottom = safe_cast<float>(intp->getIntpVal(Globals::etalonFrag->intnsVls,
-																  lcs->etCrd[m].X - 1, lcs->etCrd[m].Y + 1));
+																  lcs->etCrd[m].X - 1, 
+																  lcs->etCrd[m].Y + 1));
 
 				float iCenter = safe_cast<float>(intp->getIntpVal(Globals::etalonFrag->intnsVls,
-																  lcs->etCrd[m].X, lcs->etCrd[m].Y));
+																  lcs->etCrd[m].X, 
+																  lcs->etCrd[m].Y));
 
 				float dQ_hx = (iCenter - safe_cast<float>(lcs->srcVals[m])) * (iRight - iLeft);
 				float dQ_hy = (iCenter - safe_cast<float>(lcs->srcVals[m])) * (iBottom - iTop);
 
-				float dQ_ang = 0;
-				float dQ_sc = 0;
+				float dQ_ang_X = -sc * (Math::Sin(ang) 
+							   * (lcs->srcCrd[m].X - Globals::etalonFrag->cntr.X) 
+							   + Math::Cos(ang) 
+							   * (lcs->srcCrd[m].Y - Globals::etalonFrag->cntr.Y));
+
+				float dQ_ang_Y = sc * (Math::Cos(ang) 
+							   * (lcs->srcCrd[m].X - Globals::etalonFrag->cntr.X) 
+							   - Math::Sin(ang) 
+							   * (lcs->srcCrd[m].Y - Globals::etalonFrag->cntr.Y));
+
+				float dQ_sc_X = Math::Cos(ang) 
+							  * (lcs->srcCrd[m].X - Globals::etalonFrag->cntr.X) 
+						  	  - Math::Sin(ang) 
+							  * (lcs->srcCrd[m].Y - Globals::etalonFrag->cntr.Y);
+
+				float dQ_sc_Y = Math::Sin(ang) 
+							  * (lcs->srcCrd[m].X - Globals::etalonFrag->cntr.X) 
+							  + Math::Cos(ang) 
+							  * (lcs->srcCrd[m].Y - Globals::etalonFrag->cntr.Y);
+				
+				float dQ_ang = (iCenter - safe_cast<float>(lcs->srcVals[m])) 
+							 * ((iRight - iLeft) * dQ_ang_X 
+							 + (iBottom - iTop) * dQ_ang_Y);
+
+				float dQ_sc = (iCenter - safe_cast<float>(lcs->srcVals[m])) 
+							* ((iRight - iLeft) * dQ_sc_X 
+							+ (iBottom - iTop) * dQ_sc_Y);
 
 				pg_hx += dQ_hx;
 				pg_hy += dQ_hy;

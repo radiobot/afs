@@ -79,8 +79,21 @@ namespace AFS {
 					lcs->srcVals[m] = intnsVals[lcs->srcCrd[m].X, lcs->srcCrd[m].Y];
 
 					// Вычисление координат точек эталонного фрагмента
-					lcs->etCrd[m].X = safe_cast<float>(lcs->srcCrd[m].X) + hx;
-					lcs->etCrd[m].Y = safe_cast<float>(lcs->srcCrd[m].Y) + hy;
+					lcs->etCrd[m].X = 1 / sc
+									* (Math::Cos(ang)
+									* (lcs->srcCrd[m].X - Globals::etalonFrag->cntr.X)
+									- Math::Sin(ang)
+									* (lcs->srcCrd[m].Y - Globals::etalonFrag->cntr.Y))
+									+ hx
+									+ Globals::etalonFrag->cntr.X;
+
+					lcs->etCrd[m].Y = 1 / sc
+									* (Math::Sin(ang)
+									* (lcs->srcCrd[m].X - Globals::etalonFrag->cntr.X)
+									+ Math::Cos(ang)
+									* (lcs->srcCrd[m].Y - Globals::etalonFrag->cntr.Y))
+									+ hy
+									+ Globals::etalonFrag->cntr.Y;
 
 					// Вычисление значения яркости точки эталонного фрагмента
 					lcs->etVals[m] = intp->getIntpVal(Globals::etalonFrag->intnsVls, 
