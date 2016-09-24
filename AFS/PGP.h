@@ -24,6 +24,7 @@ namespace AFS {
 				hyVals = gcnew vector<double>();
 				angVals = gcnew vector<double>();
 				scVals = gcnew vector<double>();
+				sc = 1;
 			}
 
 		public:
@@ -79,12 +80,14 @@ namespace AFS {
 					lcs->srcVals[m] = intnsVals[lcs->srcCrd[m].X, lcs->srcCrd[m].Y];
 
 					// Вычисление координат точек эталонного фрагмента
-					lcs->etCrd[m].X = Math::Cos(ang) * (safe_cast<float>(lcs->srcCrd[m].X) - Globals::etalonFrag->cntr.X) 
-									- Math::Sin(ang) * (safe_cast<float>(lcs->srcCrd[m].Y) - Globals::etalonFrag->cntr.Y) 
+					lcs->etCrd[m].X = 1/sc 
+									* (Math::Cos(ang) * (safe_cast<float>(lcs->srcCrd[m].X) - Globals::etalonFrag->cntr.X) 
+									- Math::Sin(ang) * (safe_cast<float>(lcs->srcCrd[m].Y) - Globals::etalonFrag->cntr.Y)) 
 									+ hx + Globals::etalonFrag->cntr.X;
 
-					lcs->etCrd[m].Y = Math::Sin(ang) * (safe_cast<float>(lcs->srcCrd[m].X) - Globals::etalonFrag->cntr.X) 
-									+ Math::Cos(ang) * (safe_cast<float>(lcs->srcCrd[m].Y) - Globals::etalonFrag->cntr.Y)
+					lcs->etCrd[m].Y = 1/sc 
+									* (Math::Sin(ang) * (safe_cast<float>(lcs->srcCrd[m].X) - Globals::etalonFrag->cntr.X) 
+									+ Math::Cos(ang) * (safe_cast<float>(lcs->srcCrd[m].Y) - Globals::etalonFrag->cntr.Y))
 									+ hy + Globals::etalonFrag->cntr.Y;
 
 					// Вычисление значения яркости точки эталонного фрагмента
@@ -137,8 +140,8 @@ namespace AFS {
 				}
 				hxVals.push_back(-hx);
 				hyVals.push_back(-hy);
-				angVals.push_back(ang * 180 / 3.142);
-				scVals.push_back(sc);
+				angVals.push_back(-ang * 180 / 3.142);
+				scVals.push_back(1/sc);
 			}
 
 			// Вычисление значения ФП

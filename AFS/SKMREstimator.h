@@ -60,11 +60,19 @@ namespace AFS {
 				float dQ_ang_Y = Math::Cos(ang) * (lcs->srcCrd[m].X - Globals::etalonFrag->cntr.X) 
 							   - Math::Sin(ang) * (lcs->srcCrd[m].Y - Globals::etalonFrag->cntr.Y);
 				
-				float dQ_ang = (iCenter - safe_cast<float>(lcs->etVals[m]))
+				float dQ_ang = (iCenter - safe_cast<float>(lcs->srcVals[m]))
 							 * ((iRight - iLeft) * dQ_ang_X 
 							 + (iBottom - iTop) * dQ_ang_Y);
 
-				float dQ_sc = 0;
+				float dQ_sc_X = Math::Cos(ang) * (lcs->srcCrd[m].X - Globals::etalonFrag->cntr.X) 
+							   - Math::Sin(ang) * (lcs->srcCrd[m].Y - Globals::etalonFrag->cntr.Y);
+
+				float dQ_sc_Y = Math::Sin(ang) * (lcs->srcCrd[m].X - Globals::etalonFrag->cntr.X) 
+							   + Math::Cos(ang) * (lcs->srcCrd[m].Y - Globals::etalonFrag->cntr.Y);
+
+				float dQ_sc = (iCenter - safe_cast<float>(lcs->srcVals[m])) 
+							 * ((iRight - iLeft) * dQ_sc_X 
+							 + (iBottom - iTop) * dQ_sc_Y);
 
 				pg_hx += dQ_hx;
 				pg_hy += dQ_hy;
